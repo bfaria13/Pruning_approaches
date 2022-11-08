@@ -1,4 +1,4 @@
-### This repo presents some interesting examples of how to use pruning approach to accelerate CNN models
+### This repo presents some interesting examples of how to use pruning approach to accelerate CNN models.
 
 ### In addition, Knowledge distilation is used to recovery the prediction power of pruned model based on high accuracy pretrained teacher model
 
@@ -33,9 +33,11 @@ or
 `git clone https://github.com/VainF/Torch-Pruning.git`
 
 
+_Next update will contain:_
+
 - In the notebook `Iterative_pruner.ipynb`, a iterative pipeline is proposed to prune Resnet models and recovering accuracy by KD.
 
-- Two different policies to choose filters to prune were compared.  
+- Comparison of different policies to choose filters to prune.  
 
 - A backward pruning pipeline gives better compression ratio without drastic accuracy drop. 
 
@@ -43,9 +45,10 @@ Examples of results:
 
 | **Method** | **Acc_pruned** | **Acc_KD** |
 | ------ | ------ | ------ |
-| Baseline |  77.62% | 77.62% |
-| IteB - L1 | 22.27% | 73.86% |
-| IteB - Clustering | 21.89% | 73.67% | 
+| Baseline |  |  |
+| IteB - L1 |  |  |
+| IteB - Rand |  |  |
+| IteB - Clustering |  |  | 
 
 
 
