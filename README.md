@@ -14,14 +14,15 @@
 
 Examples of results:
 
-|------|------|------|
-|**Method**|**Acc_pruned**|**Acc_KD**|
-|Baseline|  77.62% | 77.62% |
-|LT - FPGM|  22.34% | 73.84% |
-|LT - ADMM |     |     | 
+| **Method** | **Acc_pruned** | **Acc_KD** |
+| ------ | ------ | ------ |
+| Baseline |  77.62% | 77.62% |
+| LT - FPGM | 22.27% | 73.86% |
+| LT - ADMM | 21.89% | 73.67% | 
 
 
-Obs.: It is essential play/test all others pruners tools from NNI. Furthermore, pruning + quantization remains open to investigations.
+Obs.: It is essential play/test others pruners tools from NNI. Furthermore, combining pruning + quantization remains open for investigations.
+
 
 #### 2) The second tool tested here is the [torch_pruning](https://github.com/VainF/Torch-Pruning) providing a simple tool for getting the model dependence and then pruning filters for each layer.
 
@@ -36,10 +37,20 @@ or
 
 - Two different policies to choose filters to prune were compared.  
 
+- A backward pruning pipeline gives better compression ratio without drastic accuracy drop. 
+
+Examples of results:
+
+| **Method** | **Acc_pruned** | **Acc_KD** |
+| ------ | ------ | ------ |
+| Baseline |  77.62% | 77.62% |
+| IteB - L1 | 22.27% | 73.86% |
+| IteB - Clustering | 21.89% | 73.67% | 
+
+
 
 **Credits:**
 
 `LotteryTicket_pruner.ipynb`: contains myself code + essential codes from NNI examples files.
 
-`Iterative_pruner.ipynb`: own reverse pipeline to prune Resnet models
-
+`Iterative_pruner.ipynb`: own reverse pipeline to prune Resnet models.
